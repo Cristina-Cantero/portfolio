@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cristina Cantero – CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Variable:opsz,wght@3..72,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chalkboard+Regular&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -155,149 +156,1135 @@
         padding: 1rem;
       }
     }
+
+    .header-block {
+      display: flex;
+      align-items: flex-start;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .header-photo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-right: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .header-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .header-main {
+      margin-bottom: 1rem;
+    }
+    .header-name {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .header-role {
+      font-size: 1.1rem;
+      color: #ffcc00;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .header-details {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+    .header-desc-bar {
+      background: #1f1f1f;
+      color: #fff;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+    @media (max-width: 600px) {
+      .header-block {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+      }
+      .header-photo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      .header-info {
+        align-items: center;
+      }
+      .header-desc-bar {
+        text-align: center;
+        padding: 0.8rem 0.6rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-<div class="cv">
-  <div class="left">
-    <div class="section">
-      <h1>Cristina Cantero</h1>
-      <p class="job-title">Product Manager · Localization Manager</p>
-      <div class="contact">
-        cristina.cantero.m@gmx.com<br />
-        +34 660 832 079<br />
-        Glòries, 08013 - Barcelona
-      </div>
-    </div>
+<style>
+  body {
+    background: #0e0e0e;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Serif Variable', serif;
+    color: #ffffff;
+    min-height: 100vh;
+  }
+  .block-top {
+    background: #dad964;
+    width: 100vw;
+    height: 64px;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 2vw;
+  }
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+    width: 100%;
+    height: 100%;
+  }
+  .nav-btn {
+    font-family: 'Source Serif Variable', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ffffff;
+    background: #3d3c3a;
+    border: none;
+    border-radius: 2.2rem;
+    width: 260px;
+    min-width: 180px;
+    max-width: 100%;
+    padding: 0.3em 0;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    outline: none;
+    letter-spacing: 0.01em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    line-height: 1;
+    border: 2px solid #0e0e0e;
+    text-transform: uppercase;
+  }
+  .nav-btn:hover, .nav-btn:focus {
+    background: #dad964;
+    color: #ffffff;
+    box-shadow: 0 4px 16px #dad96444;
+  }
+  .block-middle {
+    background: #0e0e0e;
+    width: 100vw;
+    min-height: 68vh;
+    max-height: 82vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 0 0 0 4vw;
+    box-sizing: border-box;
+  }
+  .middle-photo {
+    height: 100%;
+    width: auto;
+    max-width: 90vw;
+    max-height: 100%;
+    display: block;
+    object-fit: contain;
+    z-index: 1;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    background: #0e0e0e;
+    position: relative;
+    align-self: center;
+  }
+  @media (max-width: 1000px) {
+    .middle-photo {
+      width: 60vw;
+      height: calc(60vw * 1640 / 944);
+      max-width: 90vw;
+      max-height: 100%;
+    }
+  }
+  @media (max-width: 600px) {
+    .middle-photo {
+      width: 90vw;
+      height: calc(90vw * 1640 / 944);
+      max-width: 98vw;
+      max-height: 100%;
+    }
+  }
+  .middle-name {
+    font-family: 'Source Serif Variable', serif;
+    font-size: 3.6rem;
+    font-weight: 800;
+    color: #dad964;
+    text-align: left;
+    margin-left: 4vw;
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+    white-space: nowrap;
+    display: flex;
+    align-items: flex-end;
+  }
+  .middle-quote {
+    position: relative;
+    z-index: 2;
+    font-family: 'Source Serif Variable', serif;
+    font-size: 2.6rem;
+    color: #dad964;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    max-width: none;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px #fffbe6, 0 0 12px #dad964;
+    text-align: left;
+    margin-left: 4vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 2vw 0 0;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+  .block-bottom {
+    background: #3d3c3a;
+    width: 100vw;
+    height: 18vh;
+    min-height: 80px;
+  }
+  @media (max-width: 1100px) {
+    .block-top {
+      height: 48px;
+      padding: 0 1vw;
+    }
+    .nav-bar {
+      gap: 1rem;
+    }
+    .nav-btn {
+      font-size: 1rem;
+      width: 150px;
+      padding: 0.2em 0;
+      height: 1.5em;
+    }
+    .block-middle {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0;
+      margin-top: 32px;
+      min-height: 60vh;
+      max-height: 80vh;
+    }
+    .middle-photo {
+      width: 40vw;
+      height: calc(40vw * 904 / 520);
+      max-width: 95vw;
+      max-height: 40vh;
+      margin-bottom: 0;
+    }
+    .middle-name {
+      font-size: 1.7rem;
+      margin-left: 0;
+      text-align: center;
+      white-space: normal;
+      justify-content: center;
+    }
+    .middle-quote {
+      font-size: 1.4rem;
+      max-width: 95vw;
+      margin: 2vh 0 2vh 0;
+      padding: 0 1vw;
+      text-align: center;
+      align-self: center;
+      white-space: normal;
+    }
+    .block-bottom {
+      height: 14vh;
+      min-height: 60px;
+    }
+  }
+  @media (max-width: 600px) {
+    .block-top {
+      height: 40px;
+      padding: 0 0.5vw;
+    }
+    .nav-bar {
+      gap: 0.5rem;
+    }
+    .nav-btn {
+      font-size: 0.95rem;
+      width: 100px;
+      padding: 0.1em 0;
+      height: 1.1em;
+    }
+    .block-middle {
+      min-height: 40vh;
+      max-height: 60vh;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin-top: 16px;
+    }
+    .middle-photo {
+      width: 70vw;
+      height: calc(70vw * 904 / 520);
+      max-width: 98vw;
+      max-height: 30vh;
+      margin-bottom: 0;
+    }
+    .middle-name {
+      font-size: 1.2rem;
+      margin-left: 0;
+      text-align: center;
+      white-space: normal;
+      justify-content: center;
+    }
+    .middle-quote {
+      font-size: 1.1rem;
+      margin: 1vh 0 1vh 0;
+      padding: 0 1vw;
+      text-align: center;
+      align-self: center;
+      white-space: normal;
+    }
+    .block-bottom {
+      height: 10vh;
+      min-height: 40px;
+    }
+  }
+  .experience-block {
+    background: #3d3c3a;
+    color: #222;
+    width: 100vw;
+    padding: 1.2rem 0 3.5rem 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 2px solid #dad964;
+    border-bottom: 2px solid #3d3c3a;
+    position: relative;
+  }
+  .experience-content {
+    max-width: 700px;
+    width: 90vw;
+    font-family: 'Source Serif Variable', serif;
+    font-size: 1.18rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    margin-left: 2.5vw;
+    padding: 0 1rem;
+    text-align: left;
+    color: #fff;
+  }
+  .experience-content h2, .experience-role, .experience-company {
+    color: #dad964;
+  }
+  .experience-content h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    color: #ffffff !important;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+  .experience-content ul {
+    margin: 0 0 1.2rem 0;
+    padding-left: 1.2em;
+  }
+  .experience-content li {
+    margin-bottom: 0.15em;
+    font-size: 1.08rem;
+    line-height: 1.3;
+  }
+  .experience-role {
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-top: 1.5em;
+    margin-bottom: 0.2em;
+    color: #ffffff;
+    letter-spacing: 0.01em;
+  }
+  .experience-company {
+    font-size: 1.05rem;
+    color: #7a6a00;
+    margin-bottom: 1.5em;
+    font-weight: 600;
+  }
+  @media (max-width: 700px) {
+    .experience-block {
+      padding: 2rem 0 2rem 0;
+    }
+    .experience-content {
+      font-size: 1rem;
+      padding: 0 0.2rem;
+    }
+    .experience-content h2 {
+      font-size: 1.3rem;
+    }
+    .experience-role {
+      font-size: 1rem;
+    }
+  }
+  .middle-name, .middle-quote {
+    color: #ffffff !important;
+    text-shadow: none !important;
+  }
+  .middle-quote {
+    color: #ffffff !important;
+    text-shadow: none !important;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .lang-selector {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+  .lang-dropdown {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-family: 'Source Serif Variable', serif;
+    font-size: 1.4rem;
+    padding: 0;
+    margin-left: 0;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    min-width: 1.7em;
+    width: auto;
+    box-shadow: none;
+  }
+  .lang-dropdown:focus {
+    background: transparent;
+    color: #dad964;
+  }
+  .lang-dropdown option {
+    color: #222;
+    background: #fff;
+  }
+  .lang-selector .world-emoji {
+    font-size: 1.4em;
+    margin-right: 0.1em;
+    vertical-align: middle;
+  }
+  @media (max-width: 1100px) {
+    .lang-selector {
+      height: 48px;
+      right: 1vw;
+    }
+    .lang-dropdown {
+      font-size: 0.95rem;
+      padding: 0.2em 1.2em 0.2em 1.2em;
+    }
+    .lang-selector .world-emoji {
+      font-size: 1.1em;
+    }
+  }
+  @media (max-width: 600px) {
+    .lang-selector {
+      height: 40px;
+      right: 0.5vw;
+    }
+    .lang-dropdown {
+      font-size: 0.8rem;
+      padding: 0.1em 0.7em 0.1em 0.7em;
+    }
+    .lang-selector .world-emoji {
+      font-size: 1em;
+    }
+  }
+  .chat-btn {
+    background: #dad964;
+    color: #0e0e0e;
+    border: 2px solid #3d3c3a;
+    border-radius: 2rem;
+    font-family: 'Source Serif Variable', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.6em 1.8em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 1.5rem;
+    margin-left: 4vw;
+    margin-top: 1.5rem;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .chat-btn:hover, .chat-btn:focus {
+    background: #ffffff;
+    color: #0e0e0e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+  }
+  .chat-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+  }
+  .chat-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    height: 70%;
+    background: #0e0e0e;
+    border: 2px solid #dad964;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .chat-header {
+    background: #dad964;
+    color: #0e0e0e;
+    padding: 1rem;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #dad964;
+  }
+  .chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    color: #ffffff;
+  }
+  .chat-input-container {
+    padding: 1rem;
+    border-top: 2px solid #dad964;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .chat-input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #dad964;
+    border-radius: 8px;
+    background: #0e0e0e;
+    color: #ffffff;
+    font-family: 'Source Serif Variable', serif;
+    outline: none;
+  }
+  .chat-send {
+    background: #dad964;
+    color: #0e0e0e;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .close-chat {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: #0e0e0e;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  @media (max-width: 600px) {
+    .chat-container {
+      width: 95%;
+      height: 80%;
+    }
+    .chat-btn {
+      font-size: 1rem;
+      padding: 0.5em 1.4em;
+    }
+  }
+  .arrow-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    font-family: 'Chalkboard Regular', cursive;
+    font-size: 0.9rem;
+    opacity: 0;
+    z-index: 5;
+    pointer-events: none;
+  }
+  .arrow-hint .arrow {
+    font-size: 1.2rem;
+    position: relative;
+    font-family: 'Chalkboard Regular', cursive;
+  }
+  .arrow-hint .arrow::before {
+    content: '→';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    animation: chalkDraw 2s ease-out forwards;
+    opacity: 0;
+    font-family: 'Chalkboard Regular', cursive;
+  }
+  .arrow-hint .text {
+    animation: textAppear 2s ease-out 1s forwards;
+    opacity: 0;
+    font-family: 'Chalkboard Regular', cursive;
+  }
+  @keyframes chalkDraw {
+    0% {
+      opacity: 0;
+      transform: scale(0) rotate(-45deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2) rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  @keyframes textAppear {
+    0% {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .arrow-hint.show {
+    opacity: 1;
+  }
+  @media (max-width: 600px) {
+    .arrow-hint {
+      font-size: 0.8rem;
+    }
+  }
+  .change-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 5;
+    pointer-events: none;
+  }
+  .change-hint img {
+    width: 80px;
+    height: auto;
+    filter: brightness(0) invert(1);
+  }
+  @media (max-width: 600px) {
+    .change-hint img {
+      width: 60px;
+    }
+  }
+  .video-placeholder {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 120px;
+    height: 120px;
+    background: #3d3c3a;
+    border: 2px solid #dad964;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .video-placeholder:hover {
+    background: #dad964;
+    transform: scale(1.05);
+  }
+  .video-placeholder::before {
+    content: '▶';
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  @media (max-width: 600px) {
+    .video-placeholder {
+      width: 80px;
+      height: 80px;
+      bottom: 1rem;
+      right: 1rem;
+    }
+    .video-placeholder::before {
+      font-size: 1.5rem;
+    }
+  }
+  .video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+  }
+  .video-expanded {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    height: 60%;
+    background: #0e0e0e;
+    border: 3px solid #dad964;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .video-expanded::before {
+    content: '▶';
+    color: #dad964;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  .close-video {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 2001;
+  }
+  @media (max-width: 600px) {
+    .video-expanded {
+      width: 95%;
+      height: 50%;
+    }
+    .video-expanded::before {
+      font-size: 2.5rem;
+    }
+  }
+  .experience-block, .education-block, .tools-skills-block {
+    border-top: 4px solid #dad964;
+  }
+  .road-image-block {
+    position: absolute;
+    top: 0;
+    right: 2vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+  .road-image-block img {
+    height: auto;
+    max-height: 70%;
+    max-width: 30vw;
+    display: block;
+  }
+  .education-columns {
+    display: flex;
+    gap: 4vw;
+    margin-top: 1.5rem;
+  }
+  .education-col {
+    flex: 1 1 0;
+    min-width: 220px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1.5px solid #dad964;
+  }
+  @media (max-width: 900px) {
+    .education-columns {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .education-col {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+  .education-role {
+    font-weight: 800;
+    font-size: 1.15rem;
+    margin-bottom: 0.2em;
+    color: #ffffff;
+    letter-spacing: 0.01em;
+  }
+</style>
 
-    <div class="section">
-      <h3>TOOLS</h3>
-      <ul>
-        <li>Jira</li>
-        <li>Crowdin</li>
-        <li>Power Automate</li>
-        <li>GitHub</li>
-        <li>Confluence</li>
-        <li>AppTweak</li>
-        <li>Photoshop</li>
-      </ul>
-
-      <h3>FRAMEWORKS</h3>
-      <ul>
-        <li>Scrum</li>
-        <li>Self-management</li>
-      </ul>
-
-      <h3>SKILLS</h3>
-      <ul>
-        <li>Leadership</li>
-        <li>Problem-solving</li>
-        <li>Initiative</li>
-        <li>Team player</li>
-        <li>Communication</li>
-        <li>Creativity</li>
-      </ul>
-
-      <h3>LANGUAGES</h3>
-      <ul>
-        <li>Spanish</li>
-        <li>English</li>
-        <li>Catalan (B2)</li>
-        <li>French (B1)</li>
-        <li>Italian (B1)</li>
-      </ul>
-
-      <h3>INTERESTS</h3>
-      <ul>
-        <li>Sculpture</li>
-        <li>Painting</li>
-        <li>Guitar</li>
-        <li>Swimming</li>
-      </ul>
-    </div>
+<div class="block-top" style="position: relative;">
+  <nav class="nav-bar">
+    <button class="nav-btn">Experience</button>
+    <button class="nav-btn">Education</button>
+    <button class="nav-btn">Tools & Skills</button>
+    <button class="nav-btn">Frameworks</button>
+  </nav>
+  <div class="lang-selector">
+    <select class="lang-dropdown" aria-label="Select language">
+      <option value="en">🌍</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+      <option value="it">Italian</option>
+      <option value="pt">Portuguese</option>
+      <option value="cat">Catalan</option>
+    </select>
   </div>
-
-  <div class="right">
-    <div class="section">
-      <p>Experienced professional committed to high standards, seeking a stimulating company to contribute my expertise and collaborate with dedicated teams to foster mutual growth and success.</p>
+</div>
+<div class="block-middle">
+    <img class="middle-photo" src="foto-cris.png" alt="Cristina Cantero Muñoz" />
+    <div>
+      <div class="middle-name">Cristina Cantero Muñoz</div>
+      <div class="middle-quote">Translating between human intelligence and artificial intelligence.</div>
+      <button class="chat-btn" onclick="openChat()">Chat with Cris AI</button>
     </div>
-
-    <div class="section">
-      <h2>PROFESSIONAL EXPERIENCE</h2>
-
-      <div class="job-block">
-        <strong>Localization Manager</strong> – Ideawise Group (Sep 2024 – Mar 2025)
-        <ul>
-          <li>Drove expansion of 3 dating apps into 18 new markets, resulting in +10% signups and +2% ROI.</li>
-          <li>Managed a pool of 12 translators and built scalable localization strategy.</li>
-          <li>Integrated Crowdin to professionalize workflows.</li>
-        </ul>
-      </div>
-
-      <div class="job-block">
-        <strong>Product Manager / Owner</strong> – Ideawise Group (Jan 2024 – Nov 2024)
-        <ul>
-          <li>Defined vision, OKRs, and tracked KPIs (engagement, revenue, retention).</li>
-          <li>Managed 5-person squad in 2-week sprints, working with 7 stakeholder teams.</li>
-        </ul>
-      </div>
-
-      <div class="job-block">
-        <strong>Automation & AI</strong> – Ideawise Group (Mar 2025 – Present)
-        <ul>
-          <li>Built GitHub script syncing Crowdin to Adapty with JSON schema.</li>
-          <li>Created scalable Office Scripts using ChatGPT API.</li>
-        </ul>
-      </div>
-
-      <div class="job-block">
-        <strong>UX Writer & Translator</strong>
-        <ul>
-          <li>Localized 3 dating apps (30k+ strings) ensuring brand voice and microcopy quality.</li>
-          <li>ASO writing for Android/iOS – titles, subtitles, promo text, keywords.</li>
-          <li>Created 300+ pieces of short content in English.</li>
-        </ul>
-      </div>
-
-      <div class="job-block">
-        <strong>Translator & Audiovisual Translator</strong>
-        <ul>
-          <li>Translated content via cloud platforms for Amazon, Glassdoor, UOC, etc.</li>
-          <li>Subtitling with cloud-based software for Disney+, Netflix, Nat Geo Wild.</li>
-        </ul>
-      </div>
+    <div class="video-placeholder" onclick="playVideo()">
+      <!-- Video will be placed here -->
     </div>
+</div>
 
-    <div class="section">
-      <h2>EDUCATION AND TRAINING</h2>
-
-      <div class="edu-item">
-        <strong>Prompt Engineering</strong>, 2025
-      </div>
-      <div class="edu-item">
-        <strong>Certified Scrum Product Owner</strong>, 2024 (16 hours)
-      </div>
-      <div class="edu-item">
-        <strong>UX Writing</strong>, UXER, 2022 (20 hours)
-      </div>
-      <div class="edu-item">
-        <strong>Design of Graphic Products</strong>, Asedem, 2019–2020 (600 hours)
-      </div>
-      <div class="edu-item">
-        <strong>Translation of Web Pages</strong>, Pimec, 2019 (40 hours)
-      </div>
-      <div class="edu-item">
-        <strong>MSc in Scientific, Technical and Medical Translation</strong>, Imperial College London, 2011–2012
-      </div>
-      <div class="edu-item">
-        <strong>Audiovisual Translation</strong>, Imperial College London, 2011 (36 hours)
-      </div>
-      <div class="edu-item">
-        <strong>B.A. in Translation and Interpreting</strong>, University of Córdoba, 2006–2010
-      </div>
+<!-- Chat Modal -->
+<div id="chatModal" class="chat-modal">
+  <div class="chat-container">
+    <div class="chat-header">
+      Chat with Cris AI
+      <button class="close-chat" onclick="closeChat()">&times;</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <p><strong>Cris AI:</strong> Hi! I'm Cris AI. How can I help you today?</p>
+    </div>
+    <div class="chat-input-container">
+      <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+      <button class="chat-send" onclick="sendMessage()">Send</button>
     </div>
   </div>
 </div>
 
-</
+<!-- Video Modal -->
+<div id="videoModal" class="video-modal">
+  <button class="close-video" onclick="closeVideo()">&times;</button>
+  <div class="video-expanded">
+    <video controls width="100%" height="100%">
+      <source src="video" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<script>
+ // Relevance AI Integration
+const RELEVANCE_API_KEY = 'sk-MDNiYzRhOGEtMDQwOC00YmMzLWE2YTktMTQ0ZmU4NTkzODRm'; // Replace with your actual API key
+const RELEVANCE_AGENT_ID = 'b6b25aaf-c865-43a3-9c2e-9cf4ab6133ff'; // Replace with your Agent ID from the URL
+
+function openChat() {
+  document.getElementById('chatModal').style.display = 'block';
+  document.getElementById('chatInput').focus();
+}
+
+function closeChat() {
+  document.getElementById('chatModal').style.display = 'none';
+}
+
+function handleKeyPress(event) {
+  if (event.key === 'Enter') {
+    sendMessage();
+  }
+}
+
+async function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const message = input.value.trim();
+  if (message) {
+    addMessage('You: ' + message);
+    input.value = '';
+
+    // Show typing indicator
+    addTypingIndicator();
+
+    try {
+      const response = await callRelevanceAI(message);
+      removeTypingIndicator();
+      addMessage('Cris AI: ' + response);
+    } catch (error) {
+      removeTypingIndicator();
+      addMessage("Cris AI: Sorry, I'm having trouble connecting right now. Please try again later.");
+      console.error('Relevance AI Error:', error);
+    }
+  }
+}
+
+async function callRelevanceAI(userMessage) {
+  const response = await fetch('https://api.relevance.ai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${RELEVANCE_API_KEY}`
+    },
+    body: JSON.stringify({
+      agent_id: RELEVANCE_AGENT_ID,
+      messages: [
+        {
+          role: 'system',
+          content: 'You are Cristina Cantero Muñoz, a Product Manager and Localization Lead. Respond in a professional, friendly manner that reflects Cristina\'s expertise and personality. Keep responses concise and helpful.'
+        },
+        {
+          role: 'user',
+          content: userMessage
+        }
+      ],
+      max_tokens: 500,
+      temperature: 0.7
+    })
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const data = await response.json();
+  return data.choices?.[0]?.message?.content || "Sorry, I didn't catch that.";
+}
+
+function addMessage(message) {
+  const messagesDiv = document.getElementById('chatMessages');
+  const p = document.createElement('p');
+  p.innerHTML = message;
+  messagesDiv.appendChild(p);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+function addTypingIndicator() {
+  const messagesDiv = document.getElementById('chatMessages');
+  const typingDiv = document.createElement('div');
+  typingDiv.id = 'typing-indicator';
+  typingDiv.innerHTML = '<em>Cris AI is typing...</em>';
+  typingDiv.style.color = '#dad964';
+  typingDiv.style.fontStyle = 'italic';
+  messagesDiv.appendChild(typingDiv);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+function removeTypingIndicator() {
+  const typingIndicator = document.getElementById('typing-indicator');
+  if (typingIndicator) {
+    typingIndicator.remove();
+  }
+}
+
+// Close modal when clicking outside
+document.getElementById('chatModal').addEventListener('click', function (e) {
+  if (e.target === this) {
+    closeChat();
+  }
+});
+</script>
+
+<div id="experience" class="experience-block">
+  <div class="experience-content" style="margin-left:2.5vw;">
+    <h2>EXPERIENCE</h2>
+    <div class="experience-role">LOCALIZATION LEAD</div>
+    <ul>
+      <li>Drive the expansion of 3 dating apps into 18 new markets resulting in +10% increase in signups and +2% increase in ROI.</li>
+      <li>Managed a pool of 12 translators.</li>
+      <li>Crafted a localization strategy for replication across products.</li>
+      <li>Professionalized the localization process with the integration of Crowdin.</li>
+      <li>Built a GitHub script syncing Crowdin human translations to Adapty Remote Config with JSON schema.</li>
+      <li>Implemented custom Office scripts integrating ChatGPT API for scalable automated localisation.</li>
+    </ul>
+    <div class="experience-role">PRODUCT OWNER</div>
+    <ul>
+      <li>Created and managed the backlog for a 5-member squad in 2-week sprints.</li>
+      <li>Identified codependencies with stakeholders part of 7 teams.</li>
+    </ul>
+    <div class="experience-role">PRODUCT MANAGER</div>
+    <ul>
+      <li>Set and track quarterly OKR.</li>
+      <li>Defined the vision and strategy.</li>
+      <li>Tracked engagement, revenue and retention KPI.</li>
+      <li>Collaborated with Design, Support, Data, Product, Development, User Acquisition, Monetization.</li>
+    </ul>
+    <div class="experience-role">UX WRITER</div>
+    <ul>
+      <li>Localised 3 dating apps into ES (±30k strings) ensuring content consistency at high level (brand voice and values) and microlevel (button copy).</li>
+      <li>ASO writing including title, subtitle, description, promo text and kws for Android and iOS.</li>
+      <li>Created ±300 pieces of 150-character content in English.</li>
+    </ul>
+    <div class="experience-role">(AV) TRANSLATOR</div>
+    <ul>
+      <li>Translated through cloud-based platforms (en-es)</li>
+      <li>Amazon, Glassdoor, UOC.</li>
+      <li>Subtitling with cloud-based software (en-es)</li>
+      <li>Nat Geo Wild, Disney+, Netflix.</li>
+    </ul>
+  </div>
+  <div class="road-image-block">
+    <img src="road.png" alt="Experience" />
+  </div>
+</div>
+<div id="education" class="education-block">
+  <div class="education-content" style="margin-left:2.5vw;">
+    <h2>EDUCATION</h2>
+    <div class="education-columns">
+      <div class="education-col">
+        <div class="education-role">Prompt Engineering</div>
+        <ul><li>(18 hours) Coursera, 2025</li></ul>
+        <div class="education-role">Certified Scrum Product Owner</div>
+        <ul><li>(16 hours) 2024</li></ul>
+        <div class="education-role">UX Writing</div>
+        <ul><li>(20 hours) UXER, 2022</li></ul>
+        <div class="education-role">Design of graphic products</div>
+        <ul><li>(600 hours) Asedem, 2019-2020</li></ul>
+        <div class="education-role">Translation of web pages</div>
+        <ul><li>(40 hours) Pimec, 2019</li></ul>
+      </div>
+      <div class="education-col">
+        <div class="education-role">MSc Scientific, Technical and Medical Translation with Translation Technology</div>
+        <ul><li>Imperial College London, 2011-2012</li></ul>
+        <div class="education-role">Audiovisual Translation</div>
+        <ul><li>(36 hours) Imperial College London, 2011</li></ul>
+        <div class="education-role">B.A. Translation and Interpreting</div>
+        <ul><li>University of Cordoba, 2006-2010</li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="tools-skills" class="tools-skills-block">
+  <div class="tools-skills-content" style="margin-left:2.5vw;">
+    <h2>TOOLS &amp; SKILLS</h2>
+    <ul class="tools-list">
+      <li>Jira</li>
+      <li>Crowdin</li>
+      <li>Power Automate</li>
+      <li>GitHub</li>
+      <li>Confluence</li>
+      <li>AppTweak</li>
+      <li>Photoshop</li>
+    </ul>
+  </div>
+</div>
+<div class="block-bottom"></div>
+
+<script>
+  // Smooth scroll to experience block on nav button click
+  document.addEventListener('DOMContentLoaded', function() {
+    const expBtn = document.querySelector('.nav-btn');
+    const expBlock = document.getElementById('experience');
+    if (expBtn && expBlock) {
+      expBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        expBlock.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  });
+</script>
+
+<script>
+  // Smooth scroll to education block on nav button click
+  document.addEventListener('DOMContentLoaded', function() {
+    const eduBtn = document.querySelectorAll('.nav-btn')[1]; // Education button
+    const eduBlock = document.getElementById('education');
+    if (eduBtn && eduBlock) {
+      eduBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        eduBlock.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  });
+</script>
+
+<script>
+  // Smooth scroll to tools & skills block on nav button click
+  document.addEventListener('DOMContentLoaded', function() {
+    const toolsBtn = document.querySelectorAll('.nav-btn')[2]; // Tools & Skills button
+    const toolsBlock = document.getElementById('tools-skills');
+    if (toolsBtn && toolsBlock) {
+      toolsBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toolsBlock.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  });
+</script>
+
+<script>
+  // Hide change hint when language is changed
+  document.querySelector('.lang-dropdown').addEventListener('change', function() {
+    document.getElementById('changeHint').style.display = 'none';
+  });
+</script>
+
+<script>
+  function playVideo() {
+    document.getElementById('videoModal').style.display = 'block';
+  }
+  
+  function closeVideo() {
+    document.getElementById('videoModal').style.display = 'none';
+  }
+  
+  // Close modal when clicking outside
+  document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeVideo();
+    }
+  });
+</script>
+
+</body>
+</html>
